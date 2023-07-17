@@ -3,12 +3,14 @@ import 'dart:io';
 import 'package:path/path.dart' as p;
 import 'package:tencent_chat_i18n_tool/tools/hash_key.dart';
 
-Future<List<String>> extractChineseEntries(List<String> directoriesToScan) async {
+Future<List<String>> extractChineseEntries(
+    List<String> directoriesToScan) async {
   List<String> entries = [];
 
   for (String dirPath in directoriesToScan) {
     Directory dir = Directory(dirPath);
-    await for (FileSystemEntity entity in dir.list(recursive: true, followLinks: false)) {
+    await for (FileSystemEntity entity
+        in dir.list(recursive: true, followLinks: false)) {
       if (entity is File && entity.path.endsWith('.dart')) {
         String fileContent = await entity.readAsString();
         entries.addAll(findChineseEntriesInFile(fileContent));
@@ -26,8 +28,10 @@ List<String> findChineseEntriesInFile(String fileContent) {
   RegExp singleQuoteRegExp = RegExp(r"'([^']*[\u4e00-\u9fa5]{1,200}[^']*)'");
   RegExp doubleQuoteRegExp = RegExp(r'"([^"]*[\u4e00-\u9fa5]{1,200}[^"]*)"');
 
-  Iterable<Match> singleQuoteMatches = singleQuoteRegExp.allMatches(fileContent);
-  Iterable<Match> doubleQuoteMatches = doubleQuoteRegExp.allMatches(fileContent);
+  Iterable<Match> singleQuoteMatches =
+      singleQuoteRegExp.allMatches(fileContent);
+  Iterable<Match> doubleQuoteMatches =
+      doubleQuoteRegExp.allMatches(fileContent);
 
   List<String> entries = [];
 
@@ -48,10 +52,13 @@ List<String> _dealWithResult(List<String> originResult) {
 
   List<String> arr = List.from(originResult.where((item) => item.isNotEmpty));
   List<String> noRepeatArr = arr.toSet().toList();
-  List<String> chineseArr = noRepeatArr.where((item) => chineseRegExp.hasMatch(item)).toList();
-  List<String> finalArr = chineseArr.where((item) => !parameterRegExp.hasMatch(item)).toList();
+  List<String> chineseArr =
+      noRepeatArr.where((item) => chineseRegExp.hasMatch(item)).toList();
+  List<String> finalArr =
+      chineseArr.where((item) => !parameterRegExp.hasMatch(item)).toList();
 
   return finalArr;
+  return finalArr.where((item) => !item.contains("\n")).toList();
 }
 
 Future<bool> checkPackagePath(String packagePath) async {
@@ -70,7 +77,8 @@ void readNewEntriesFromFile(String packagePath) async {
   // Check if the file exists, and create it if it doesn't
   final file = File(userTxtFilePath);
   if (!file.existsSync()) {
-    stdout.write("File 'new_language_entries.txt' does not exist. Creating it...");
+    stdout.write(
+        "File 'new_language_entries.txt' does not exist. Creating it...");
     await file.create();
   }
 
@@ -90,7 +98,11 @@ void readNewEntriesFromFile(String packagePath) async {
   }
 
   // Add the new entries with their hash keys to each language JSON file
-  Directory(p.join(packagePath, 'lib', 'language_json')).listSync().where((element) => element is File && !element.path.endsWith('strings.g.dart')).forEach((jsonFile) {
+  Directory(p.join(packagePath, 'lib', 'language_json'))
+      .listSync()
+      .where((element) =>
+          element is File && !element.path.endsWith('strings.g.dart'))
+      .forEach((jsonFile) {
     // Explicitly cast FileSystemEntity to File
     File file = jsonFile as File;
 
@@ -108,9 +120,10 @@ void readNewEntriesFromFile(String packagePath) async {
 
       // Write the updated content back to the JSON file
       file.writeAsStringSync(encoder.convert(jsonContent));
-      stdout.write("Successfully added new entries to ${file.path}");
+      stdout.write("\nSuccessfully added new entries to ${file.path}");
     } catch (e) {
-      stdout.write("Failed to add new entries to ${file.path}: ${e.toString()}");
+      stdout.write(
+          "\nFailed to add new entries to ${file.path}: ${e.toString()}");
     }
   });
 }
