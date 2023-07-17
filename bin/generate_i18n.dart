@@ -24,7 +24,7 @@ void generateTranslationDartFile(String baseI18NPath) async {
   const bool statsMode = false;
   const bool verbose = true;
 
-  stdout.write('Generating translations...\n');
+  stdout.write('\nGenerating translations...\n');
 
   final stopwatch = Stopwatch();
   if (!watchMode) {
@@ -32,7 +32,7 @@ void generateTranslationDartFile(String baseI18NPath) async {
     stopwatch.start();
   }
 
-  if(!(fs.isDirectorySync("languages"))){
+  if (!(fs.isDirectorySync("languages"))) {
     Directory("languages").create();
   }
 
@@ -76,7 +76,7 @@ Future<BuildConfig> getBuildConfig(
       buildConfig = BuildConfigBuilder.fromYaml(content);
       if (buildConfig != null) {
         if (verbose) {
-          stdout.write('Found build.yaml in ${file.path}');
+          stdout.write('\nFound build.yaml in ${file.path}');
         }
         break;
       }
@@ -90,9 +90,9 @@ Future<BuildConfig> getBuildConfig(
 
   // show build config
   if (verbose) {
-    stdout.write('');
+    stdout.write('\n');
     buildConfig.printConfig();
-    stdout.write('');
+    stdout.write('\n');
   }
 
   return buildConfig;
@@ -132,7 +132,7 @@ Future<void> generateTranslations({
 
         if (verbose) {
           stdout.write(
-              'Found base name: "$baseName" (used for output file name and class names)');
+              '\nFound base name: "$baseName" (used for output file name and class names)');
         }
         break;
       }
@@ -140,7 +140,7 @@ Future<void> generateTranslations({
   }
 
   if (baseName == null || outputFileName == null) {
-    stdout.write('Error: No base translation file.');
+    stdout.write('\nError: No base translation file.');
     return;
   }
 
@@ -159,8 +159,8 @@ Future<void> generateTranslations({
 
   // STEP 2: scan translations
   if (verbose) {
-    stdout.write('Scanning translations...');
-    stdout.write('');
+    stdout.write('\nScanning translations...');
+    stdout.write('\n');
   }
 
   final translationMap = NamespaceTranslationMap();
@@ -172,7 +172,7 @@ Future<void> generateTranslations({
       translations = BaseDecoder.getDecoderOfFileType(buildConfig.fileType)
           .decode(content);
     } on FormatException catch (e) {
-      stdout.write('');
+      stdout.write('\n');
       throw 'File: ${file.path}\n$e';
     }
 
@@ -199,6 +199,7 @@ Future<void> generateTranslations({
           if (verbose) {
             final namespaceLog = buildConfig.namespaces ? '($namespace) ' : '';
             final base = locale == buildConfig.baseLocale ? '(base) ' : '';
+            stdout.write("\n");
             stdout.write(
                 '${('$base$namespaceLog${locale.languageTag}').padLeft(padLeft)} -> ${file.path}');
           }
@@ -214,6 +215,7 @@ Future<void> generateTranslations({
 
         if (verbose) {
           final namespaceLog = buildConfig.namespaces ? '($namespace) ' : '';
+          stdout.write("\n");
           stdout.write(
               '${('(base) $namespaceLog${buildConfig.baseLocale.languageTag}').padLeft(padLeft)} -> ${file.path}');
         }
@@ -242,7 +244,7 @@ Future<void> generateTranslations({
         if (verbose) {
           final namespaceLog = buildConfig.namespaces ? '($namespace) ' : '';
           stdout.write(
-              '${(namespaceLog + locale.languageTag).padLeft(padLeft)} -> ${file.path}');
+              '\n${(namespaceLog + locale.languageTag).padLeft(padLeft)} -> ${file.path}');
         }
       }
     }
@@ -255,8 +257,8 @@ Future<void> generateTranslations({
       translationMap: translationMap,
     ).printResult();
     if (stopwatch != null) {
-      stdout.write('');
-      stdout.write('Scan done. (${stopwatch.elapsed})');
+      stdout.write('\n');
+      stdout.write('\nScan done. (${stopwatch.elapsed})');
     }
     return; // skip generation
   }
@@ -270,7 +272,7 @@ Future<void> generateTranslations({
   );
 
   // STEP 4: write output to hard drive
-  if(baseI18NPath != null && baseI18NPath.isNotEmpty){
+  if (baseI18NPath != null && baseI18NPath.isNotEmpty) {
     outputFilePath = "${baseI18NPath}strings.g.dart";
   }
   FileUtils.createMissingFolders(filePath: outputFilePath);
@@ -278,7 +280,8 @@ Future<void> generateTranslations({
     // single file
     FileUtils.writeFile(
       path: outputFilePath,
-      content: joinAsSingleOutput(result.header, result.translations, result.flatMap),
+      content: joinAsSingleOutput(
+          result.header, result.translations, result.flatMap),
     );
   } else {
     // multiple files
@@ -311,35 +314,23 @@ Future<void> generateTranslations({
 
   if (verbose) {
     if (buildConfig.outputFileName == null && buildConfig.namespaces) {
-      stdout.write('');
+      stdout.write('\n');
       stdout.write(
           'WARNING: Please specify "output_file_name". Using fallback file name for now.');
     }
 
-    stdout.write('');
+    stdout.write('\n');
     if (buildConfig.outputFormat == OutputFormat.singleFile) {
-      stdout.write('Output: $outputFilePath');
+      stdout.write('\nOutput: $outputFilePath');
     } else {
-      stdout.write('Output:');
-      stdout.write(' -> $outputFilePath');
-      for (final locale in result.translations.keys) {
-        stdout.write(' -> ${BuildResultPaths.localePath(
-          outputPath: outputFilePath,
-          locale: locale,
-          pathSeparator: Platform.pathSeparator,
-        )}');
-      }
-      if (result.flatMap != null) {
-        stdout.write(' -> ${BuildResultPaths.flatMapPath(
-          outputPath: outputFilePath,
-          pathSeparator: Platform.pathSeparator,
-        )}');
-      }
-      stdout.write('');
+      stdout.write('\nOutput:');
+      stdout.write('\n -> $outputFilePath');
+      stdout.write('\n');
     }
 
     if (stopwatch != null) {
-      stdout.write('Translations generated successfully. (${stopwatch.elapsed})');
+      stdout.write(
+          '\nTranslations generated successfully. (${stopwatch.elapsed})');
     }
   }
 }
@@ -362,7 +353,8 @@ extension on String {
   }
 }
 
-String joinAsSingleOutput(String header, Map<I18nLocale, String> translations, String? flatMap) {
+String joinAsSingleOutput(
+    String header, Map<I18nLocale, String> translations, String? flatMap) {
   final buffer = StringBuffer();
   buffer.writeln(header);
   buffer.writeln('// translations');
