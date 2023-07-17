@@ -70,7 +70,7 @@ void readNewEntriesFromFile(String packagePath) async {
   // Check if the file exists, and create it if it doesn't
   final file = File(userTxtFilePath);
   if (!file.existsSync()) {
-    print("File 'new_language_entries.txt' does not exist. Creating it...");
+    stdout.write("File 'new_language_entries.txt' does not exist. Creating it...");
     await file.create();
   }
 
@@ -108,9 +108,9 @@ void readNewEntriesFromFile(String packagePath) async {
 
       // Write the updated content back to the JSON file
       file.writeAsStringSync(encoder.convert(jsonContent));
-      print("Successfully added new entries to ${file.path}");
+      stdout.write("Successfully added new entries to ${file.path}");
     } catch (e) {
-      print("Failed to add new entries to ${file.path}: ${e.toString()}");
+      stdout.write("Failed to add new entries to ${file.path}: ${e.toString()}");
     }
   });
 }

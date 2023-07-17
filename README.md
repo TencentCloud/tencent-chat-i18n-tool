@@ -96,7 +96,7 @@ Replace `<your-username>` with your GitHub username.
 
 ## Update Instructions
 
-The Tencent Cloud Chat i18n package will be updated synchronously with the Tencent Cloud Chat UIKit to maintain version consistency. With each update, we will add new entries from the latest version of Chat UIKit to this package. All updates will be published synchronously on pub.dev and the GitHub repository.
+The Tencent Cloud Chat i18n package will be updated synchronously with the [`Tencent Cloud Chat UIKit`](https://pub.dev/packages/tencent_cloud_chat_uikit) to maintain version consistency. With each update, we will add new entries from the latest version of Chat UIKit to this package. All updates will be published synchronously on pub.dev and the GitHub repository.
 
 If you have forked this package to your GitHub account, please note that you need to synchronize the latest entry library of this package to your forked version via `pull upstream` operation whenever the Chat UIKit is updated. This ensures that your forked version contains both the entries you added or modified and the new entries we added with each version. When merging the code and resolving conflicts, please make sure that each JSON entry library remains intact.
 

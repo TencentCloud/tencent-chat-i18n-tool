@@ -52,7 +52,7 @@ void main(List<String> arguments) async {
             continue;
           }
         } else {
-          print("Invalid input. Please enter a non-empty path.");
+          stdout.write("Invalid input. Please enter a non-empty path.");
           continue;
         }
       }
@@ -69,7 +69,7 @@ void main(List<String> arguments) async {
           continue;
         }
       } else {
-        print("Invalid input. Please enter a non-empty path.");
+        stdout.write("Invalid input. Please enter a non-empty path.");
         continue;
       }
     }
@@ -121,14 +121,14 @@ void addNewEntries(String packagePath) async {
     List<String> directoriesToScan = dirsInput?.isNotEmpty == true ? dirsInput!.split(',') : ['lib'];
 
     // Scan project code and extract new entries
-    print("Scanning project code...");
+    stdout.write("Scanning project code...");
     List<String> extractedEntries = await extractChineseEntries(directoriesToScan);
 
     // Update the 'new_language_entries.txt' file with the extracted entries
     String userTxtFilePath = './new_language_entries.txt';
     final userTxtFile = File(userTxtFilePath);
     if (!userTxtFile.existsSync()) {
-      print("File 'new_language_entries.txt' does not exist. Creating it...");
+      stdout.write("File 'new_language_entries.txt' does not exist. Creating it...");
       await userTxtFile.create();
     }
     final List<String> userEntries = await userTxtFile.readAsLines();
@@ -136,14 +136,14 @@ void addNewEntries(String packagePath) async {
     File(userTxtFilePath).writeAsStringSync(userEntries.toSet().toList().join('\n'));
 
     // Prompt the user to check and edit the 'new_language_entries.txt' file
-    print("\nThe newly extracted Simplified Chinese entries have been added to the 'new_language_entries.txt' file. Please open and review the file. If necessary, make any edits to the entries.");
+    stdout.write("\nThe newly extracted Simplified Chinese entries have been added to the 'new_language_entries.txt' file. Please open and review the file. If necessary, make any edits to the entries.");
     stdout.write("Press Enter to continue...");
     stdin.readLineSync();
 
     // After the user confirms, read new entries from the file
     readNewEntriesFromFile(packagePath);
   } else {
-    print("Invalid input. Please enter either 1 or 2.");
+    stdout.write("Invalid input. Please enter either 1 or 2.");
   }
 }
 

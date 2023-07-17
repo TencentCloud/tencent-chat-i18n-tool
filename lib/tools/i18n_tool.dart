@@ -126,7 +126,7 @@ class I18nUtils {
 
   static AppLocale findDeviceLocale([String? locale, bool? isStore]) {
     final isStorePara = isStore ?? false;
-    final String? deviceLocale =
+    final String deviceLocale =
         locale ?? WidgetsBinding.instance.window.locale.toLanguageTag();
     if (isStorePara) {
       deviceLocaleStored = deviceLocale;

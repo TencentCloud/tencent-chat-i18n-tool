@@ -24,7 +24,7 @@ void generateTranslationDartFile(String baseI18NPath) async {
   const bool statsMode = false;
   const bool verbose = true;
 
-  print('Generating translations...\n');
+  stdout.write('Generating translations...\n');
 
   final stopwatch = Stopwatch();
   if (!watchMode) {
@@ -76,7 +76,7 @@ Future<BuildConfig> getBuildConfig(
       buildConfig = BuildConfigBuilder.fromYaml(content);
       if (buildConfig != null) {
         if (verbose) {
-          print('Found build.yaml in ${file.path}');
+          stdout.write('Found build.yaml in ${file.path}');
         }
         break;
       }
@@ -90,9 +90,9 @@ Future<BuildConfig> getBuildConfig(
 
   // show build config
   if (verbose) {
-    print('');
+    stdout.write('');
     buildConfig.printConfig();
-    print('');
+    stdout.write('');
   }
 
   return buildConfig;
@@ -131,7 +131,7 @@ Future<void> generateTranslations({
         outputFileName = baseName + buildConfig.outputFilePattern;
 
         if (verbose) {
-          print(
+          stdout.write(
               'Found base name: "$baseName" (used for output file name and class names)');
         }
         break;
@@ -140,7 +140,7 @@ Future<void> generateTranslations({
   }
 
   if (baseName == null || outputFileName == null) {
-    print('Error: No base translation file.');
+    stdout.write('Error: No base translation file.');
     return;
   }
 
@@ -159,8 +159,8 @@ Future<void> generateTranslations({
 
   // STEP 2: scan translations
   if (verbose) {
-    print('Scanning translations...');
-    print('');
+    stdout.write('Scanning translations...');
+    stdout.write('');
   }
 
   final translationMap = NamespaceTranslationMap();
@@ -172,7 +172,7 @@ Future<void> generateTranslations({
       translations = BaseDecoder.getDecoderOfFileType(buildConfig.fileType)
           .decode(content);
     } on FormatException catch (e) {
-      print('');
+      stdout.write('');
       throw 'File: ${file.path}\n$e';
     }
 
@@ -199,7 +199,7 @@ Future<void> generateTranslations({
           if (verbose) {
             final namespaceLog = buildConfig.namespaces ? '($namespace) ' : '';
             final base = locale == buildConfig.baseLocale ? '(base) ' : '';
-            print(
+            stdout.write(
                 '${('$base$namespaceLog${locale.languageTag}').padLeft(padLeft)} -> ${file.path}');
           }
         });
@@ -214,7 +214,7 @@ Future<void> generateTranslations({
 
         if (verbose) {
           final namespaceLog = buildConfig.namespaces ? '($namespace) ' : '';
-          print(
+          stdout.write(
               '${('(base) $namespaceLog${buildConfig.baseLocale.languageTag}').padLeft(padLeft)} -> ${file.path}');
         }
       }
@@ -241,7 +241,7 @@ Future<void> generateTranslations({
 
         if (verbose) {
           final namespaceLog = buildConfig.namespaces ? '($namespace) ' : '';
-          print(
+          stdout.write(
               '${(namespaceLog + locale.languageTag).padLeft(padLeft)} -> ${file.path}');
         }
       }
@@ -255,8 +255,8 @@ Future<void> generateTranslations({
       translationMap: translationMap,
     ).printResult();
     if (stopwatch != null) {
-      print('');
-      print('Scan done. (${stopwatch.elapsed})');
+      stdout.write('');
+      stdout.write('Scan done. (${stopwatch.elapsed})');
     }
     return; // skip generation
   }
@@ -311,35 +311,35 @@ Future<void> generateTranslations({
 
   if (verbose) {
     if (buildConfig.outputFileName == null && buildConfig.namespaces) {
-      print('');
-      print(
+      stdout.write('');
+      stdout.write(
           'WARNING: Please specify "output_file_name". Using fallback file name for now.');
     }
 
-    print('');
+    stdout.write('');
     if (buildConfig.outputFormat == OutputFormat.singleFile) {
-      print('Output: $outputFilePath');
+      stdout.write('Output: $outputFilePath');
     } else {
-      print('Output:');
-      print(' -> $outputFilePath');
+      stdout.write('Output:');
+      stdout.write(' -> $outputFilePath');
       for (final locale in result.translations.keys) {
-        print(' -> ${BuildResultPaths.localePath(
+        stdout.write(' -> ${BuildResultPaths.localePath(
           outputPath: outputFilePath,
           locale: locale,
           pathSeparator: Platform.pathSeparator,
         )}');
       }
       if (result.flatMap != null) {
-        print(' -> ${BuildResultPaths.flatMapPath(
+        stdout.write(' -> ${BuildResultPaths.flatMapPath(
           outputPath: outputFilePath,
           pathSeparator: Platform.pathSeparator,
         )}');
       }
-      print('');
+      stdout.write('');
     }
 
     if (stopwatch != null) {
-      print('Translations generated successfully. (${stopwatch.elapsed})');
+      stdout.write('Translations generated successfully. (${stopwatch.elapsed})');
     }
   }
 }
