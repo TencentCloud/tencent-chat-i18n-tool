@@ -13,7 +13,6 @@ dependencies:
   file: ^6.1.2
   flutter:
     sdk: flutter
-  shell: ^2.0.0
   fast_i18n: any
   path: any
   yaml: any
