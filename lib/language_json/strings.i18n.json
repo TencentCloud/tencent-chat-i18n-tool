@@ -661,7 +661,7 @@
   "k_13sqc0z": "Clear Messages",
   "k_0glns86": "Delete Conversation",
   "k_13s99rx": "Clear Messages",
-  "k_11vsa3j": "Exist",
+  "k_11vsa3j": "Leave",
   "k_11vvszp": "Disband",
   "k_15i9w72": "Administrator",
   "k_0p3espj": "Ser Remark",
@@ -710,5 +710,18 @@
   "k_066fxsz": "Show in Folder",
   "k_0k432y2": "Unable to send, contains folders.",
   "k_002wb4y": "Conversation",
-  "k_0od4qyh": "Video Error"
+  "k_0od4qyh": "Video Error",
+  "k_1cdzld5": "Product information",
+  "k_19qt9y2": "Service evaluation",
+  "k_13s7ltw": "Card message",
+  "k_13ajr25": "Online customer service",
+  "k_0ti5mfz": "No online customer service available",
+  "k_1bfkxg9": "Transfer of 0KB files is not supported",
+  "k_0vvsw7g": "File processing exception",
+  "k_06e224q": "[Message recalled by administrator]",
+  "k_1u1mjcl": "[Message recalled]",
+  "k_1qcqxea": "Select Multiple Chats",
+  "k_1qgmc20": "Select a Chat",
+  "k_1d8nx6f": "Open in a new window",
+  "k_1hz05ax": "Downloading original resources, please wait..."
 }

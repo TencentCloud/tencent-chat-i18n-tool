@@ -3,9 +3,9 @@
  * Generated file. Do not edit.
  *
  * Locales: 5
- * Strings: 3560 (712.0 per locale)
+ * Strings: 3625 (725.0 per locale)
  *
- * Built on 2023-07-13 at 09:07 UTC
+ * Built on 2023-07-17 at 11:05 UTC
  */
 
 import 'package:flutter/widgets.dart';
@@ -991,7 +991,7 @@ class _StringsEn {
 	String get k_13sqc0z => 'Clear Messages';
 	String get k_0glns86 => 'Delete Conversation';
 	String get k_13s99rx => 'Clear Messages';
-	String get k_11vsa3j => 'Exist';
+	String get k_11vsa3j => 'Leave';
 	String get k_11vvszp => 'Disband';
 	String get k_15i9w72 => 'Administrator';
 	String get k_0p3espj => 'Ser Remark';
@@ -1041,6 +1041,19 @@ class _StringsEn {
 	String get k_0k432y2 => 'Unable to send, contains folders.';
 	String get k_002wb4y => 'Conversation';
 	String get k_0od4qyh => 'Video Error';
+	String get k_1cdzld5 => 'Product information';
+	String get k_19qt9y2 => 'Service evaluation';
+	String get k_13s7ltw => 'Card message';
+	String get k_13ajr25 => 'Online customer service';
+	String get k_0ti5mfz => 'No online customer service available';
+	String get k_1bfkxg9 => 'Transfer of 0KB files is not supported';
+	String get k_0vvsw7g => 'File processing exception';
+	String get k_06e224q => '[Message recalled by administrator]';
+	String get k_1u1mjcl => '[Message recalled]';
+	String get k_1qcqxea => 'Select Multiple Chats';
+	String get k_1qgmc20 => 'Select a Chat';
+	String get k_1d8nx6f => 'Open in a new window';
+	String get k_1hz05ax => 'Downloading original resources, please wait...';
 }
 
 // Path: <root>
@@ -1771,6 +1784,19 @@ class _StringsJa implements _StringsEn {
 	@override String get k_0k432y2 => 'フォルダが含まれているため送信できません';
 	@override String get k_002wb4y => 'チャット';
 	@override String get k_0od4qyh => 'ビデオが異常です';
+	@override String get k_1cdzld5 => '商品情報';
+	@override String get k_19qt9y2 => 'サービス評価';
+	@override String get k_13s7ltw => 'カードメッセージ';
+	@override String get k_13ajr25 => 'オンラインカスタマーサービス';
+	@override String get k_0ti5mfz => 'オンラインカスタマーサービスはありません';
+	@override String get k_1bfkxg9 => '0KBファイルの転送はサポートされていません';
+	@override String get k_0vvsw7g => 'ファイル処理の例外';
+	@override String get k_06e224q => '[管理者によってメッセージが取り消されました]';
+	@override String get k_1u1mjcl => '[メッセージが取り消されました]';
+	@override String get k_1qcqxea => '複数の会話を選択';
+	@override String get k_1qgmc20 => '会話を選択';
+	@override String get k_1d8nx6f => '新しいウィンドウで開く';
+	@override String get k_1hz05ax => '元のリソースをダウンロードしています。お待ちください...';
 }
 
 // Path: <root>
@@ -2501,6 +2527,19 @@ class _StringsKo implements _StringsEn {
 	@override String get k_0k432y2 => '폴더가 포함되어 있어서 전송할 수 없습니다';
 	@override String get k_002wb4y => '채팅';
 	@override String get k_0od4qyh => '비디오 예외';
+	@override String get k_1cdzld5 => '제품 정보를 입력하십시오';
+	@override String get k_19qt9y2 => '서비스 평가';
+	@override String get k_13s7ltw => '카드 메시지';
+	@override String get k_13ajr25 => '온라인 고객 서비스';
+	@override String get k_0ti5mfz => '온라인 고객 서비스가 없습니다';
+	@override String get k_1bfkxg9 => '0KB 파일 전송이 지원되지 않습니다';
+	@override String get k_0vvsw7g => '파일 처리 예외';
+	@override String get k_06e224q => '[메시지가 관리자에 의해 취소되었습니다]';
+	@override String get k_1u1mjcl => '[메시지가 취소되었습니다]';
+	@override String get k_1qcqxea => '여러 대화 선택';
+	@override String get k_1qgmc20 => '대화 선택';
+	@override String get k_1d8nx6f => '새 창에서 열기';
+	@override String get k_1hz05ax => '원래 리소스를 다운로드 중입니다. 잠시 기다려주세요...';
 }
 
 // Path: <root>
@@ -3231,6 +3270,19 @@ class _StringsZhHans implements _StringsEn {
 	@override String get k_0k432y2 => '无法发送，包含文件夹';
 	@override String get k_002wb4y => '会话';
 	@override String get k_0od4qyh => '视频文件异常';
+	@override String get k_1cdzld5 => '请填写商品信息';
+	@override String get k_19qt9y2 => '服务评价';
+	@override String get k_13s7ltw => '卡片消息';
+	@override String get k_13ajr25 => '在线客服';
+	@override String get k_0ti5mfz => '暂无在线客服';
+	@override String get k_1bfkxg9 => '不支持 0KB 文件的传输';
+	@override String get k_0vvsw7g => '文件处理异常';
+	@override String get k_06e224q => '[消息被管理员撤回]';
+	@override String get k_1u1mjcl => '[消息被撤回]';
+	@override String get k_1qcqxea => '选择多个会话';
+	@override String get k_1qgmc20 => '选择一个会话';
+	@override String get k_1d8nx6f => '在新窗口中打开';
+	@override String get k_1hz05ax => '正在下载原始资源，请稍候...';
 }
 
 // Path: <root>
@@ -3961,6 +4013,19 @@ class _StringsZhHant implements _StringsEn {
 	@override String get k_0k432y2 => '無法發送，包含文件夾';
 	@override String get k_002wb4y => '會話';
 	@override String get k_0od4qyh => '視頻文件異常';
+	@override String get k_1cdzld5 => '請填寫產品資訊';
+	@override String get k_19qt9y2 => '服務評價';
+	@override String get k_13s7ltw => '卡片訊息';
+	@override String get k_13ajr25 => '線上客服';
+	@override String get k_0ti5mfz => '暫無線上客服';
+	@override String get k_1bfkxg9 => '不支持 0KB 文件的傳輸';
+	@override String get k_0vvsw7g => '文件處理異常';
+	@override String get k_06e224q => '[訊息被管理員撤回]';
+	@override String get k_1u1mjcl => '[訊息被撤回]';
+	@override String get k_1qcqxea => '選擇多個對話';
+	@override String get k_1qgmc20 => '選擇一個對話';
+	@override String get k_1d8nx6f => '在新視窗中打開';
+	@override String get k_1hz05ax => '正在下載原始資源，請稍候...';
 }
 
 /// Flat map(s) containing all translations.
@@ -4631,7 +4696,7 @@ extension on _StringsEn {
 			'k_13sqc0z': 'Clear Messages',
 			'k_0glns86': 'Delete Conversation',
 			'k_13s99rx': 'Clear Messages',
-			'k_11vsa3j': 'Exist',
+			'k_11vsa3j': 'Leave',
 			'k_11vvszp': 'Disband',
 			'k_15i9w72': 'Administrator',
 			'k_0p3espj': 'Ser Remark',
@@ -4681,6 +4746,19 @@ extension on _StringsEn {
 			'k_0k432y2': 'Unable to send, contains folders.',
 			'k_002wb4y': 'Conversation',
 			'k_0od4qyh': 'Video Error',
+			'k_1cdzld5': 'Product information',
+			'k_19qt9y2': 'Service evaluation',
+			'k_13s7ltw': 'Card message',
+			'k_13ajr25': 'Online customer service',
+			'k_0ti5mfz': 'No online customer service available',
+			'k_1bfkxg9': 'Transfer of 0KB files is not supported',
+			'k_0vvsw7g': 'File processing exception',
+			'k_06e224q': '[Message recalled by administrator]',
+			'k_1u1mjcl': '[Message recalled]',
+			'k_1qcqxea': 'Select Multiple Chats',
+			'k_1qgmc20': 'Select a Chat',
+			'k_1d8nx6f': 'Open in a new window',
+			'k_1hz05ax': 'Downloading original resources, please wait...',
 		};
 	}
 }
@@ -5400,6 +5478,19 @@ extension on _StringsJa {
 			'k_0k432y2': 'フォルダが含まれているため送信できません',
 			'k_002wb4y': 'チャット',
 			'k_0od4qyh': 'ビデオが異常です',
+			'k_1cdzld5': '商品情報',
+			'k_19qt9y2': 'サービス評価',
+			'k_13s7ltw': 'カードメッセージ',
+			'k_13ajr25': 'オンラインカスタマーサービス',
+			'k_0ti5mfz': 'オンラインカスタマーサービスはありません',
+			'k_1bfkxg9': '0KBファイルの転送はサポートされていません',
+			'k_0vvsw7g': 'ファイル処理の例外',
+			'k_06e224q': '[管理者によってメッセージが取り消されました]',
+			'k_1u1mjcl': '[メッセージが取り消されました]',
+			'k_1qcqxea': '複数の会話を選択',
+			'k_1qgmc20': '会話を選択',
+			'k_1d8nx6f': '新しいウィンドウで開く',
+			'k_1hz05ax': '元のリソースをダウンロードしています。お待ちください...',
 		};
 	}
 }
@@ -6119,6 +6210,19 @@ extension on _StringsKo {
 			'k_0k432y2': '폴더가 포함되어 있어서 전송할 수 없습니다',
 			'k_002wb4y': '채팅',
 			'k_0od4qyh': '비디오 예외',
+			'k_1cdzld5': '제품 정보를 입력하십시오',
+			'k_19qt9y2': '서비스 평가',
+			'k_13s7ltw': '카드 메시지',
+			'k_13ajr25': '온라인 고객 서비스',
+			'k_0ti5mfz': '온라인 고객 서비스가 없습니다',
+			'k_1bfkxg9': '0KB 파일 전송이 지원되지 않습니다',
+			'k_0vvsw7g': '파일 처리 예외',
+			'k_06e224q': '[메시지가 관리자에 의해 취소되었습니다]',
+			'k_1u1mjcl': '[메시지가 취소되었습니다]',
+			'k_1qcqxea': '여러 대화 선택',
+			'k_1qgmc20': '대화 선택',
+			'k_1d8nx6f': '새 창에서 열기',
+			'k_1hz05ax': '원래 리소스를 다운로드 중입니다. 잠시 기다려주세요...',
 		};
 	}
 }
@@ -6838,6 +6942,19 @@ extension on _StringsZhHans {
 			'k_0k432y2': '无法发送，包含文件夹',
 			'k_002wb4y': '会话',
 			'k_0od4qyh': '视频文件异常',
+			'k_1cdzld5': '请填写商品信息',
+			'k_19qt9y2': '服务评价',
+			'k_13s7ltw': '卡片消息',
+			'k_13ajr25': '在线客服',
+			'k_0ti5mfz': '暂无在线客服',
+			'k_1bfkxg9': '不支持 0KB 文件的传输',
+			'k_0vvsw7g': '文件处理异常',
+			'k_06e224q': '[消息被管理员撤回]',
+			'k_1u1mjcl': '[消息被撤回]',
+			'k_1qcqxea': '选择多个会话',
+			'k_1qgmc20': '选择一个会话',
+			'k_1d8nx6f': '在新窗口中打开',
+			'k_1hz05ax': '正在下载原始资源，请稍候...',
 		};
 	}
 }
@@ -7557,6 +7674,19 @@ extension on _StringsZhHant {
 			'k_0k432y2': '無法發送，包含文件夾',
 			'k_002wb4y': '會話',
 			'k_0od4qyh': '視頻文件異常',
+			'k_1cdzld5': '請填寫產品資訊',
+			'k_19qt9y2': '服務評價',
+			'k_13s7ltw': '卡片訊息',
+			'k_13ajr25': '線上客服',
+			'k_0ti5mfz': '暫無線上客服',
+			'k_1bfkxg9': '不支持 0KB 文件的傳輸',
+			'k_0vvsw7g': '文件處理異常',
+			'k_06e224q': '[訊息被管理員撤回]',
+			'k_1u1mjcl': '[訊息被撤回]',
+			'k_1qcqxea': '選擇多個對話',
+			'k_1qgmc20': '選擇一個對話',
+			'k_1d8nx6f': '在新視窗中打開',
+			'k_1hz05ax': '正在下載原始資源，請稍候...',
 		};
 	}
 }
