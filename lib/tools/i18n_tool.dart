@@ -56,7 +56,6 @@ class I18nUtils {
   // Usage update: using `TIM_t` directly instead of `ttBuild.imt`
   String imt_origin(String value) {
     String currentKey = HashKey.getHashKey(value);
-    print(currentKey);
     String translatedValue = t[currentKey] ?? value;
     return translatedValue;
   }
@@ -67,7 +66,6 @@ class I18nUtils {
     final originTemplate = template.replaceAllMapped(
         expForParameterOut, (Match m) => replaceParameterForTemplate(m));
     final originKey = HashKey.getHashKey(originTemplate);
-    print(originTemplate + originKey);
     final Function translatedValueFunction = t[originKey] ??
         ({
           Object? option1,

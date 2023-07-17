@@ -124,7 +124,7 @@ void addNewEntries(String packagePath) async {
   stdout.write(
       "1. Read new entries from the 'new_language_entries.txt' file in the project root directory.\n");
   stdout.write(
-      "2. Scan the project code to extract new entries and update the 'new_language_entries.txt' file (currently supports Simplified Chinese only).\n");
+      "2. Scan the project code to extract new entries and update the 'new_language_entries.txt' file (currently supports Chinese only).\n");
   stdout.write("Please enter the number of your choice (1/2): ");
 
   String? userInput = stdin.readLineSync();
@@ -158,7 +158,7 @@ void addNewEntries(String packagePath) async {
 
     // Prompt the user to check and edit the 'new_language_entries.txt' file
     stdout.write(
-        "\n\nThe newly extracted Simplified Chinese entries have been added to the 'new_language_entries.txt' file. Please open and review the file. If necessary, make any edits to the entries.");
+        "\n\nThe newly extracted Chinese entries have been added to the 'new_language_entries.txt' file. Please open and review the file. If necessary, make any edits to the entries.");
     stdout.write("\nPress Enter to continue...");
     stdin.readLineSync();
 
