@@ -45,7 +45,7 @@ dependency_overrides:
 
 Replace `/path/to/your/local/repository` with the actual path to the cloned repository on your local machine.
 
-Now you can use the Tencent Cloud Chat i18n Tool by running the main script in the cloned directory.
+Now you can use the Tencent Cloud Chat i18n Tool by running the main script in the root directory of your project.
 
 ## Adding New Entries in Your Project
 
@@ -70,7 +70,7 @@ Follow these steps to use the Tencent Cloud Chat i18n Tool:
 
 3. Run the tool again and select option B. The tool will save the built-in language entries in JSON files to your project directory.
 
-4. Open the JSON files located in the `languages` directory and translate the new entries at the bottom of each file.
+4. Open the JSON files located in the `languages` directory and translate the new entries at the bottom of each file. At this point, you can also locate specific entries by their key values and modify the translation text in each language entry library. However, please do not delete any entries that are not needed.
 
 5. (Optional) If you want to add support for a new language, follow these steps:
 

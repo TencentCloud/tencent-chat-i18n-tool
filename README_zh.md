@@ -34,7 +34,7 @@ git clone https://github.com/<your-username>/tencent-chat-i18n-tool.git
 
 将`<your-username>`替换为您的GitHub用户名。
 
-4. 在项目的`pubspec.yaml`文件中，将fork的仓库的本地路径添加到`dependency_overrides`部分：
+4. 在您项目的`pubspec.yaml`文件中，将fork的仓库的本地路径添加到`dependency_overrides`部分：
 
 ```yaml
 dependency_overrides:
@@ -44,7 +44,7 @@ dependency_overrides:
 
 将`/path/to/your/local/repository`替换为本地机器上克隆的仓库的实际路径。
 
-现在，您可以通过在克隆的目录中运行主脚本来使用腾讯云IM i18n 工具。
+现在，可以通过在您项目的根目录中运行主脚本来使用腾讯云IM i18n 工具。
 
 ## 在您的项目中添加新词条
 
@@ -69,7 +69,7 @@ dependency_overrides:
 
 3. 再次运行工具并选择选项B（B. Retrieve the tool's built-in language entries, including JSON files for all supported languages, and save them to your project directory for further customization.）。工具将把所有支持语言的内置语言条目保存到项目目录中的 JSON 文件中。
 
-4. 打开位于 `languages` 目录中的 JSON 文件，并翻译每个文件底部的新条目。
+4. 打开位于 `languages` 目录中的 JSON 文件，并翻译每个文件底部的新条目。此时，您还可以根据键值定位特定条目，并修改各语言条目库中的翻译文本。但是，请不要删除不需要的词条。
 
 5. （可选）如果您想添加对新语言的支持，请按照以下步骤操作：
 
@@ -78,7 +78,7 @@ dependency_overrides:
    - 将复制的文件重命名为 `strings_${ISO_LANGUAGE_CODE}.i18n.json`，其中 `${ISO_LANGUAGE_CODE}` 是您要添加的新语言的 ISO 代码（例如，对于法语，文件名为`strings_fr.i18n.json`）。
    - 将新文件中的所有条目翻译成相应的语言。
 
-6. 再次运行工具并选择选项C（C. 将您修改的所有语言的 JSON 文件注入回工具，使更新后的配置生效。）将您修改的语言JSON文件注入回工具。现在，更新后的配置将在您的项目中生效。
+6. 再次运行工具并选择选项C（C. Inject your modified language JSON files for all languages back into the tool, allowing the updated configuration to take effect.）将您修改的语言JSON文件注入回工具。现在，更新后的配置将在您的项目中生效。
 
 完成这些步骤后，您所做的更改将应用于腾讯云IM i18n 工具的本地副本。如果您想与他人合作或共享更改，可以将修改后的工具包源代码推送到内部 Pub 服务器或 Git 仓库。要在项目中使用更新后的工具包作为依赖项，只需在`pubspec.yaml`文件中更新工具包路径，使其指向在线仓库：
 
