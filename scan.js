@@ -16,16 +16,6 @@ const originLanguageString = fs.readFileSync(originLanguageFile);
 
 const originLanguageDict = JSON.parse(originLanguageString);
 
-try {
-  const data = fs.readFileSync('lib/data/i18n_md5_mapping.dart', 'utf8').split('\n');
-  const lineIndex = data.findIndex((item) => item.indexOf('const languageMapping =') > -1);
-  data[lineIndex] = 'const languageMapping = ';
-  data[lineIndex + 1] = `    '''${JSON.stringify(originLanguageDict).replace(/\$/g, '\\$')}''';`;
-  fs.writeFileSync('lib/data/i18n_md5_mapping.dart', data.join('\n'), 'utf8');
-} catch (err) {
-  console.log(`替换dart文件失败, ${err}`);
-}
-
 const languageFiles = fs.readdirSync(path.join('lib', 'language_json')).filter((e) => (e !== originLanguageFileName) && e !== 'strings.g.dart');
 
 languageFiles.forEach((targetFileName) => {

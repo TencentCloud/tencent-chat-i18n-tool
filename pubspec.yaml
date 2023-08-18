@@ -1,6 +1,6 @@
 name: tencent_chat_i18n_tool
 description: An easy-to-use and versatile Flutter internationalization tool tailored for application using Tencent Cloud Chat, streamlining multi-language support for developers.
-version: 2.1.3+2
+version: 2.2.0
 homepage: https://www.tencentcloud.com/zh/products/im?from=pub
 repository: https://github.com/TencentCloud/tencent-chat-i18n-tool
 documentation: https://www.tencentcloud.com/document/product/1047/52154?from=pub
