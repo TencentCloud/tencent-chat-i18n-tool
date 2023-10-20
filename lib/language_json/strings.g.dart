@@ -3,9 +3,9 @@
  * Generated file. Do not edit.
  *
  * Locales: 5
- * Strings: 3675 (735.0 per locale)
+ * Strings: 3680 (736.0 per locale)
  *
- * Built on 2023-08-24 at 04:55 UTC
+ * Built on 2023-10-20 at 09:35 UTC
  */
 
 import 'package:flutter/widgets.dart';
@@ -1064,6 +1064,7 @@ class _StringsEn {
 	String get k_1l1p7uv => 'Hourly Ranking 162nd';
 	String get k_0p7ezww => 'Welcome to the live room! Strictly prohibit minors from live broadcasting, rewarding, or selling alcoholic products to minors. If the host sells alcoholic products, please minors watch under the accompaniment of a guardian. Inside the live room, strictly forbid illegal and irregular, vulgar and pornographic, smoking and excessive drinking, and personal injury content. If the host induces rewards or private transactions in an improper way during the live broadcast, please make a cautious judgment to prevent personal property loss. To purchase products, please click the shopping cart button below, do not engage in private transactions, and pay attention to property safety to beware of online fraud.';
 	String get k_0zw0eau => 'Flutter';
+	String get k_132m79q => 'Call End';
 }
 
 // Path: <root>
@@ -1817,6 +1818,7 @@ class _StringsJa implements _StringsEn {
 	@override String get k_1l1p7uv => 'アワーリーダーボード162位';
 	@override String get k_0p7ezww => 'ライブルームへようこそ！未成年者はライブ配信や投げ銭禁止、未成年者へのアルコール販売禁止。アルコールが販売されている場合は、未成年者は保護者同伴のもとで視聴してください。ライブルームでは違法・違規レベルの行為、猥褻、喫煙酒、身体的なダメージなどが禁止されています。不適切な方法でリワードプライベートトレードは注意し、身体と財産の損失を避けてください。商品を購入するには下のショッピングカートボタンをクリックし、プライベート取引は厳禁してください。財産の安全に注意し、インターネット詐欺に注意してください。';
 	@override String get k_0zw0eau => '風雨人生';
+	@override String get k_132m79q => '通話が終わる';
 }
 
 // Path: <root>
@@ -2570,6 +2572,7 @@ class _StringsKo implements _StringsEn {
 	@override String get k_1l1p7uv => '시간별 순위 162위';
 	@override String get k_0p7ezww => '라이브 방에 오신 것을 환영합니다! 미성년자는 동영상 라이브 예능, 페이팔 또는 미성년자에게 술을 판매하는 것은 금지됩니다. 만약 술을 판매하는 브로드캐스트의 경 배경, 미성년자는 보호자의 동행 아래 만나시길 바랍니다. 브로드캐스트 방송에는 불법, 방송 아스크, 저속, 술, 신체 상해 내용이 엄격하게 금지됩니다. 라이브 방송 중 불올바른 방법으로 팁(리워드) 및 개별 거래가 주의하도록 부탁드립니다. 재산 손실 방지 상품 구매를 원하시면 아래 아이콘을 클릭바랍니다. 비공식 개별 거래 금지. 모든 국민들의 재산을 안전하게 유지하려고 인터넷 사기를 방지하십시오.';
 	@override String get k_0zw0eau => 'Flutter';
+	@override String get k_132m79q => '통화가 끝나다';
 }
 
 // Path: <root>
@@ -3323,6 +3326,7 @@ class _StringsZhHans implements _StringsEn {
 	@override String get k_1l1p7uv => '小时榜排名162名';
 	@override String get k_0p7ezww => '欢迎来到直播间！严禁未成年人直播、打赏或向末成年人销售酒类商品。若主播销售酒类商品，请未成年人在监护人陪同下观看。直播间内严禁出现违法违规、低俗色情、吸烟酗酒、人身伤害等内容。如主播在直播中以不当方式诱导打赏私下交易请谨慎判断以防人身财产损失购买商品请点击下方购物车按钮，请勿私下交易，请大家注意财产安全，谨防网络诈骗。';
 	@override String get k_0zw0eau => '风雨人生';
+	@override String get k_132m79q => '通话结束';
 }
 
 // Path: <root>
@@ -4076,6 +4080,7 @@ class _StringsZhHant implements _StringsEn {
 	@override String get k_1l1p7uv => '喺一個鐘頭排行榜名次162';
 	@override String get k_0p7ezww => '歡迎嚟到直播間！未成年人唔准直播、打賞或者向未成年人出售酒精類產品。如果播主銷售酒精，未成年人仔請陪伴家長一齊觀看。直播間度唔容許出現違法、低俗色情、吸煙飲酒等行為。發現唔啱嘅獎勵或交易，請謹慎對待，免得衰走財失。如果要買產品，請撳下面購物車鍵，私下交易係違規嘅，留意財產安全，謹防上當受騙。';
 	@override String get k_0zw0eau => '風雨人生';
+	@override String get k_132m79q => '通話結束';
 }
 
 /// Flat map(s) containing all translations.
@@ -4819,6 +4824,7 @@ extension on _StringsEn {
 			'k_1l1p7uv': 'Hourly Ranking 162nd',
 			'k_0p7ezww': 'Welcome to the live room! Strictly prohibit minors from live broadcasting, rewarding, or selling alcoholic products to minors. If the host sells alcoholic products, please minors watch under the accompaniment of a guardian. Inside the live room, strictly forbid illegal and irregular, vulgar and pornographic, smoking and excessive drinking, and personal injury content. If the host induces rewards or private transactions in an improper way during the live broadcast, please make a cautious judgment to prevent personal property loss. To purchase products, please click the shopping cart button below, do not engage in private transactions, and pay attention to property safety to beware of online fraud.',
 			'k_0zw0eau': 'Flutter',
+			'k_132m79q': 'Call End',
 		};
 	}
 }
@@ -5561,6 +5567,7 @@ extension on _StringsJa {
 			'k_1l1p7uv': 'アワーリーダーボード162位',
 			'k_0p7ezww': 'ライブルームへようこそ！未成年者はライブ配信や投げ銭禁止、未成年者へのアルコール販売禁止。アルコールが販売されている場合は、未成年者は保護者同伴のもとで視聴してください。ライブルームでは違法・違規レベルの行為、猥褻、喫煙酒、身体的なダメージなどが禁止されています。不適切な方法でリワードプライベートトレードは注意し、身体と財産の損失を避けてください。商品を購入するには下のショッピングカートボタンをクリックし、プライベート取引は厳禁してください。財産の安全に注意し、インターネット詐欺に注意してください。',
 			'k_0zw0eau': '風雨人生',
+			'k_132m79q': '通話が終わる',
 		};
 	}
 }
@@ -6303,6 +6310,7 @@ extension on _StringsKo {
 			'k_1l1p7uv': '시간별 순위 162위',
 			'k_0p7ezww': '라이브 방에 오신 것을 환영합니다! 미성년자는 동영상 라이브 예능, 페이팔 또는 미성년자에게 술을 판매하는 것은 금지됩니다. 만약 술을 판매하는 브로드캐스트의 경 배경, 미성년자는 보호자의 동행 아래 만나시길 바랍니다. 브로드캐스트 방송에는 불법, 방송 아스크, 저속, 술, 신체 상해 내용이 엄격하게 금지됩니다. 라이브 방송 중 불올바른 방법으로 팁(리워드) 및 개별 거래가 주의하도록 부탁드립니다. 재산 손실 방지 상품 구매를 원하시면 아래 아이콘을 클릭바랍니다. 비공식 개별 거래 금지. 모든 국민들의 재산을 안전하게 유지하려고 인터넷 사기를 방지하십시오.',
 			'k_0zw0eau': 'Flutter',
+			'k_132m79q': '통화가 끝나다',
 		};
 	}
 }
@@ -7045,6 +7053,7 @@ extension on _StringsZhHans {
 			'k_1l1p7uv': '小时榜排名162名',
 			'k_0p7ezww': '欢迎来到直播间！严禁未成年人直播、打赏或向末成年人销售酒类商品。若主播销售酒类商品，请未成年人在监护人陪同下观看。直播间内严禁出现违法违规、低俗色情、吸烟酗酒、人身伤害等内容。如主播在直播中以不当方式诱导打赏私下交易请谨慎判断以防人身财产损失购买商品请点击下方购物车按钮，请勿私下交易，请大家注意财产安全，谨防网络诈骗。',
 			'k_0zw0eau': '风雨人生',
+			'k_132m79q': '通话结束',
 		};
 	}
 }
@@ -7787,6 +7796,7 @@ extension on _StringsZhHant {
 			'k_1l1p7uv': '喺一個鐘頭排行榜名次162',
 			'k_0p7ezww': '歡迎嚟到直播間！未成年人唔准直播、打賞或者向未成年人出售酒精類產品。如果播主銷售酒精，未成年人仔請陪伴家長一齊觀看。直播間度唔容許出現違法、低俗色情、吸煙飲酒等行為。發現唔啱嘅獎勵或交易，請謹慎對待，免得衰走財失。如果要買產品，請撳下面購物車鍵，私下交易係違規嘅，留意財產安全，謹防上當受騙。',
 			'k_0zw0eau': '風雨人生',
+			'k_132m79q': '通話結束',
 		};
 	}
 }
